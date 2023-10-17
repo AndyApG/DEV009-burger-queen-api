@@ -1,10 +1,17 @@
+const mongoose = require('mongoose');
 const config = require('./config');
 
 // eslint-disable-next-line no-unused-vars
 const { dbUrl } = config;
 
-async function connect() {
-  // TODO: Conexión a la Base de Datos
-}
+function connect() {
+  return new Promise((resolve, reject) => {
+    mongoose.connect(dbUrl)
+      .then((db) => resolve(db))
+      .catch((err) => reject(err));
+  })
 
+  // TODO: Conexión a la Base de Datos
+
+}
 module.exports = { connect };
