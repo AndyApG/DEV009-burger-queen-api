@@ -1,3 +1,4 @@
+'use strict'
 const express = require('express');
 const config = require('./config');
 const authMiddleware = require('./middleware/auth');
@@ -17,7 +18,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(authMiddleware(secret));
 
-connect().then(res => console.log(res)).catch(err => console.log(err));
+
 
 // Registrar rutas
 routes(app, (err) => {
@@ -25,8 +26,10 @@ routes(app, (err) => {
     throw err;
   }
   app.use(errorHandler);
-  
-  app.listen(port, () => {
-    console.info(`App listening on port ${port}`);
+    app.listen(port, () => {
+      connect().then(res =>{
+        console.info(`App listening on port ${port}`);
+      }).catch(err => err);
+      
   });
 });

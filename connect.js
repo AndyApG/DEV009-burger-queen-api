@@ -7,7 +7,7 @@ const { dbUrl } = config;
 function connect() {
   return new Promise((resolve, reject) => {
     mongoose.connect(dbUrl)
-      .then((db) => resolve(db))
+      .then((db) => resolve('Conexion a la base de datos'))
       .catch((err) => reject(err));
   })
 
