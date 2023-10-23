@@ -1,6 +1,6 @@
 version: "3"
 services:
-  db:
+  db: #nombre del contenedor 
     image: mongo:4
     volumes:
       - ./db-data:/data/db
@@ -15,7 +15,7 @@ services:
       - private
 
   node:
-    image: node:12 # https://hub.docker.com/_/node/
+    image: node:16 # https://hub.docker.com/_/node/
     user: node
     working_dir: /home/node/app
     environment:
