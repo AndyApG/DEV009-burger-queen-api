@@ -22,11 +22,12 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "mongodb-memory-server": "^8.12.2"
+    "mongodb-memory-server": "^8.12.2",
+    "mongoose": "^7.6.1"
   },
   "devDependencies": {
     "docdash": "^1.2.0",
-    "eslint": "^8.3.0",
+    "eslint": "^8.51.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.22.1",
     "gh-pages": "^3.1.0",
@@ -40,5 +41,7 @@
     "createdAt": "2023-09-07T22:09:46.212Z",
     "version": "7.0.0",
     "commit": "83f7c5b700737b948113a4c663f5a826eb3cbe83"
-  }
+  },
+  "description": "",
+  "author": "Andrea Aparicio"
 }
